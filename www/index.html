@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>My App</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <!--<link rel="stylesheet" href="js/3d-sliding/framework7.3dpanels.css">-->
+
+    <!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="js/owl-carousel/owl.carousel.css">
+
+    <!-- Default Theme -->
+    <link rel="stylesheet" href="js/owl-carousel/owl.theme.css">
+
+    <link rel="stylesheet" href="js/crosscover/css/animate.min.css">
+    <link rel="stylesheet" href="js/crosscover/css/crosscover.min.css">
+    <!--
+        <link rel="stylesheet" href="lib/framework7/css/framework7.material.min.css">
+        <link rel="stylesheet" href="lib/framework7/css/framework7.material.colors.min.css">
+         <!---->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/form_style.css">
+</head>
+
+<body>
+
+<!-- About Popup -->
+<div class="popup popup-signup">
+    <div class="content-block">
+        <div class="signup_title" align="center">
+            Became our member
+            <div class="login_subtitle" align="center">
+                Please write your credentials and proceed
+            </div>
+        </div>
+        <div class="content-block">
+            <div align="center" style="padding-left: 40px;padding-right: 40px;">
+                <ul class="form-style-1">
+                    <li>
+                        <input type="text" name="signup_username" id="signup_username" class="field-long"
+                               placeholder="Username"/>
+                    </li>
+                    <li>
+                        <input type="password" name="signup_password" id="signup_password" class="field-long"
+                               placeholder="At least 5 characters"/>
+                    </li>
+                    <li style="padding-left: 10px;padding-right: 10px;">
+                        <p><a href="#" class="submit button button-fill button-big color-red">Sign Up</a>
+                        </p>
+                        <p><a href="#" class="button button-round  color-gray close-popup">Cancel</a>
+                        </p>
+
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="panel-overlay"></div>
+
+<div class="panel panel-left panel-cover">
+    <div class="content-block">
+        <p><a href="about.html">About app</a></p>
+        <p><a href="contacts.html">Contacts</a></p>
+        <p><a href="channels-list-native-player.html">Channels List (Native player)</a></p>
+        <p><a href="channels.html">All channels</a></p>
+    </div>
+</div>
+<!-- Views -->
+<div class="views">
+    <!-- Your main view, should have "view-main" class -->
+
+    <div class="view view-main">
+
+
+        <!-- Top Navbar-->
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <!--
+                      Right link contains only icon - additional "icon-only" class
+                      Additional "open-panel" class tells app to open panel when we click on this link
+                    -->
+                </div>
+                <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                <div class="center sliding">
+                    <img src="img/colorized_logo.png" width="60px"/>
+                </div>
+
+                <div class="right">
+                    <a href="#" data-popup=".popup-signup" class="link open-popup">Sign up</a>
+                </div>
+
+            </div>
+        </div>
+        <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-fixed">
+            <!-- Page, "data-page" contains page name -->
+            <div data-page="index" class="page no-swipeback">
+                <!-- Scrollable page content -->
+                <div class="page-content">
+
+                    <div class="crosscover" style="height: 220px;">
+
+                        <!-- Overlay
+                        <div class="crosscover-overlay">
+                            <div class="crosscover-island">
+                                <h1 class="crosscover-title">...</h1>
+                                <h2 class="crosscover-description">...</h2>
+                            </div>
+                        </div>
+                        -->
+
+                        <div class="crosscover-list">
+                            <a class="crosscover-item" href="http://blivesta.com">
+                                <img src="img/batman-v-superman-dawn-of-justice-promotional-poster.png" alt="image01"/>
+                            </a>
+                            <div class="crosscover-item">
+                                <img src="img/deadpool.jpg" alt="image02"/>
+                            </div>
+                            <div class="crosscover-item">
+                                <img src="img/tarzan.jpg" alt="image03"/>
+                            </div>
+                            <div class="crosscover-item">
+                                <img src="img/finding-dory-poster.jpg" alt="image03"/>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="home_title" align="center">
+                        See what's next
+                        <div class="home_subtitle" align="center">
+                            WATCH ANYWARE. CANCEL ANYTIME
+                        </div>
+                    </div>
+
+                    <div align="center" style="padding-top:10px; padding-left: 70px;padding-right: 70px;">
+                        <p><a href="login.html" class="button button-fill button-big color-red">LOGIN TO YOUR
+                            ACCOUNT</a></p>
+
+                    </div>
+
+                    <div class="content-block">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+
+<script type="text/javascript" src="js/jquery.md5.js"></script>
+<script type="text/javascript" src="js/js.cookie.js"></script>
+
+<script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+
+<script type="text/javascript" src="js/bitmovin-player/bitdash.min.js"></script>
+<script type="text/javascript" src="js/3d-sliding/framework7.3dpanels.js"></script>
+<script src="js/owl-carousel/owl.carousel.js"></script>
+
+
+<script type="text/javascript" src="js/crosscover/js/crosscover.min.js"></script>
+
+<script type="text/javascript" src="js/login.js"></script>
+
+<script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>
